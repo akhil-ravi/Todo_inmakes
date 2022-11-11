@@ -1,0 +1,59 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="text">
+                    <h2>TodO</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+         <form method="POST" class="p-3 shadow" style="background-color:aqua;" >
+         {% csrf_token %}
+             <div class="form-group">
+         <label title="name" style="color:orange;"><h4>Name</h4></label>
+
+         <input type="text" class="form-control" name="task" placeholder="enter the name">
+</div>
+<div class="form-group">
+     <label title="name" style="color:orange"><h4>priority</h4></label><br>
+
+     <input type="text" class="form-control" name="Priority" placeholder="priority">
+</div>
+             <div class="form-group">
+                  <label title="date of birth" style="color:orange"><h4>Date of birth</h4></label><br>
+
+     <input type="date" class="form-control" name="date" placeholder="date of birth">
+             </div>
+             <div class="container">
+     <input type="submit" class="btn btn-success">
+                 </div>
+ </form>
+
+    </div>
+         {% for j in details %}
+
+     {% endfor %}
+</div>
+</div>
+
+    </div>
+</div>
+
+<div style="margin-left:130px; ">
+
+</div>
+
+{% endblock %}

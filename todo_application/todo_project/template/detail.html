@@ -1,0 +1,19 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="col-md-6" style="background-color:violet;">
+            <h4 style="color:orang">Task will be completed</h4>
+    <div  class="shadow-lg p-3 mb-5 bg-body rounded" style="background-color:teal;">
+        <div class="card-body">
+            <h5 class="card-title" style="color:yellow;">k{{ details.name }}</h5>
+            <p style="color:yellow;"><b>{{ details.priority }}</b></p>
+            <p style="color:yellow;"><b>{{ details.Date}}</b></p>
+            <a class="btn btn-danger" href="{% url 'delete' details.id %}">DELETE</a>
+            <a class="btn btn-success" href="{% url 'update' details.id %}">UPDATE</a>
+        </div>
+    </div>
+</div>
+    {% endblock %}
